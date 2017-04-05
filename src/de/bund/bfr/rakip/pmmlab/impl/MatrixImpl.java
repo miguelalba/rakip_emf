@@ -1,0 +1,217 @@
+/**
+ */
+package de.bund.bfr.rakip.pmmlab.impl;
+
+import de.bund.bfr.rakip.pmmlab.Matrix;
+import de.bund.bfr.rakip.pmmlab.pmmlabPackage;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Matrix</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link de.bund.bfr.rakip.pmmlab.impl.MatrixImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.bund.bfr.rakip.pmmlab.impl.MatrixImpl#getDetails <em>Details</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class MatrixImpl extends MinimalEObjectImpl.Container implements Matrix {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDetails() <em>Details</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDetails()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DETAILS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDetails() <em>Details</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDetails()
+	 * @generated
+	 * @ordered
+	 */
+	protected String details = DETAILS_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MatrixImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return pmmlabPackage.Literals.MATRIX;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, pmmlabPackage.MATRIX__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDetails() {
+		return details;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDetails(String newDetails) {
+		String oldDetails = details;
+		details = newDetails;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, pmmlabPackage.MATRIX__DETAILS, oldDetails, details));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case pmmlabPackage.MATRIX__NAME:
+				return getName();
+			case pmmlabPackage.MATRIX__DETAILS:
+				return getDetails();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case pmmlabPackage.MATRIX__NAME:
+				setName((String)newValue);
+				return;
+			case pmmlabPackage.MATRIX__DETAILS:
+				setDetails((String)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case pmmlabPackage.MATRIX__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case pmmlabPackage.MATRIX__DETAILS:
+				setDetails(DETAILS_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case pmmlabPackage.MATRIX__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case pmmlabPackage.MATRIX__DETAILS:
+				return DETAILS_EDEFAULT == null ? details != null : !DETAILS_EDEFAULT.equals(details);
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", details: ");
+		result.append(details);
+		result.append(')');
+		return result.toString();
+	}
+
+} //MatrixImpl

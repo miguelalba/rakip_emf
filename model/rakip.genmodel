@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.bund.bfr.rakip/src" modelPluginID="de.bund.bfr.rakip"
+    modelName="Rakip" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>openfsmr.ecore</foreignModel>
+  <foreignModel>pmmlab.ecore</foreignModel>
+  <genPackages prefix="openfsmr" basePackage="de.bund.bfr.rakip" disposableProviderFactory="true"
+      ecorePackage="openfsmr.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="openfsmr.ecore#//FoodProcess">
+      <genEnumLiterals ecoreEnumLiteral="openfsmr.ecore#//FoodProcess/cooling"/>
+      <genEnumLiterals ecoreEnumLiteral="openfsmr.ecore#//FoodProcess/drying"/>
+      <genEnumLiterals ecoreEnumLiteral="openfsmr.ecore#//FoodProcess/fermentation"/>
+      <genEnumLiterals ecoreEnumLiteral="openfsmr.ecore#//FoodProcess/high_pressure_processing"/>
+      <genEnumLiterals ecoreEnumLiteral="openfsmr.ecore#//FoodProcess/non_thermal_processing"/>
+      <genEnumLiterals ecoreEnumLiteral="openfsmr.ecore#//FoodProcess/storage"/>
+      <genEnumLiterals ecoreEnumLiteral="openfsmr.ecore#//FoodProcess/thermal_processing"/>
+      <genEnumLiterals ecoreEnumLiteral="openfsmr.ecore#//FoodProcess/cross_contamination"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="openfsmr.ecore#//ModelType">
+      <genEnumLiterals ecoreEnumLiteral="openfsmr.ecore#//ModelType/growth"/>
+      <genEnumLiterals ecoreEnumLiteral="openfsmr.ecore#//ModelType/inactivation"/>
+      <genEnumLiterals ecoreEnumLiteral="openfsmr.ecore#//ModelType/survival"/>
+      <genEnumLiterals ecoreEnumLiteral="openfsmr.ecore#//ModelType/metabolite_formation"/>
+      <genEnumLiterals ecoreEnumLiteral="openfsmr.ecore#//ModelType/growth_boundary_model"/>
+      <genEnumLiterals ecoreEnumLiteral="openfsmr.ecore#//ModelType/spoilage"/>
+      <genEnumLiterals ecoreEnumLiteral="openfsmr.ecore#//ModelType/transfer"/>
+      <genEnumLiterals ecoreEnumLiteral="openfsmr.ecore#//ModelType/mpd"/>
+      <genEnumLiterals ecoreEnumLiteral="openfsmr.ecore#//ModelType/lpd"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="openfsmr.ecore#//CurationStatus">
+      <genEnumLiterals ecoreEnumLiteral="openfsmr.ecore#//CurationStatus/based_on_published_results"/>
+      <genEnumLiterals ecoreEnumLiteral="openfsmr.ecore#//CurationStatus/independent_validation_results"/>
+      <genEnumLiterals ecoreEnumLiteral="openfsmr.ecore#//CurationStatus/long_term_use"/>
+      <genEnumLiterals ecoreEnumLiteral="openfsmr.ecore#//CurationStatus/not_curated"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="openfsmr.ecore#//URL"/>
+    <genClasses ecoreClass="openfsmr.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openfsmr.ecore#//Variable/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openfsmr.ecore#//Variable/unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openfsmr.ecore#//Variable/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openfsmr.ecore#//Variable/max"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="openfsmr.ecore#//Environment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openfsmr.ecore#//Environment/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openfsmr.ecore#//Environment/details"/>
+    </genClasses>
+    <genClasses ecoreClass="openfsmr.ecore#//Organism">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openfsmr.ecore#//Organism/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openfsmr.ecore#//Organism/details"/>
+    </genClasses>
+    <genClasses ecoreClass="openfsmr.ecore#//OpenFSMRRecord">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference openfsmr.ecore#//OpenFSMRRecord/independentVariables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference openfsmr.ecore#//OpenFSMRRecord/dependentVariables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference openfsmr.ecore#//OpenFSMRRecord/environment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference openfsmr.ecore#//OpenFSMRRecord/organism"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openfsmr.ecore#//OpenFSMRRecord/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openfsmr.ecore#//OpenFSMRRecord/creator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openfsmr.ecore#//OpenFSMRRecord/createdDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openfsmr.ecore#//OpenFSMRRecord/modifiedDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openfsmr.ecore#//OpenFSMRRecord/rights"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openfsmr.ecore#//OpenFSMRRecord/referenceDescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openfsmr.ecore#//OpenFSMRRecord/referenceDescriptionLink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openfsmr.ecore#//OpenFSMRRecord/software"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openfsmr.ecore#//OpenFSMRRecord/foodProcess"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openfsmr.ecore#//OpenFSMRRecord/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openfsmr.ecore#//OpenFSMRRecord/curationStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openfsmr.ecore#//OpenFSMRRecord/subject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute openfsmr.ecore#//OpenFSMRRecord/notes"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="pmmlab" basePackage="de.bund.bfr.rakip" disposableProviderFactory="true"
+      ecorePackage="pmmlab.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="pmmlab.ecore#//ModelClass">
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ModelClass/unknown"/>
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ModelClass/growth"/>
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ModelClass/inactivation"/>
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ModelClass/survival"/>
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ModelClass/growth_inactivation"/>
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ModelClass/inactivation_survival"/>
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ModelClass/growth_survival"/>
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ModelClass/growth_inactivation_survival"/>
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ModelClass/T"/>
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ModelClass/pH"/>
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ModelClass/aw"/>
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ModelClass/T_pH"/>
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ModelClass/T_aw"/>
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ModelClass/pH_aw"/>
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ModelClass/T_pH_aw"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="pmmlab.ecore#//ReferenceType">
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ReferenceType/paper"/>
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ReferenceType/sop"/>
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ReferenceType/la"/>
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ReferenceType/manual"/>
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ReferenceType/lab_log"/>
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ReferenceType/book"/>
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ReferenceType/website"/>
+      <genEnumLiterals ecoreEnumLiteral="pmmlab.ecore#//ReferenceType/report"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="pmmlab.ecore#//URL"/>
+    <genClasses ecoreClass="pmmlab.ecore#//PmmLabRecord">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//PmmLabRecord/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//PmmLabRecord/creatorGivenName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//PmmLabRecord/creatorFamilyName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//PmmLabRecord/creatorContact"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//PmmLabRecord/creationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//PmmLabRecord/modifiedDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//PmmLabRecord/license"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//PmmLabRecord/year"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//PmmLabRecord/comment"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pmmlab.ecore#//PmmLabRecord/matrix"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pmmlab.ecore#//PmmLabRecord/organism"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pmmlab.ecore#//PmmLabRecord/parameter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pmmlab.ecore#//PmmLabRecord/referencedescription"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pmmlab.ecore#//PmmLabRecord/modelequation"/>
+    </genClasses>
+    <genClasses ecoreClass="pmmlab.ecore#//Matrix">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//Matrix/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//Matrix/details"/>
+    </genClasses>
+    <genClasses ecoreClass="pmmlab.ecore#//Organism">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//Organism/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//Organism/details"/>
+    </genClasses>
+    <genClasses ecoreClass="pmmlab.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//Parameter/isDependent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//Parameter/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//Parameter/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//Parameter/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//Parameter/unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//Parameter/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//Parameter/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//Parameter/max"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//Parameter/sse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//Parameter/mse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//Parameter/rmse"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//Parameter/rsquared"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//Parameter/aic"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//Parameter/bic"/>
+    </genClasses>
+    <genClasses ecoreClass="pmmlab.ecore#//ReferenceDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//ReferenceDescription/link"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//ReferenceDescription/firstAuthor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//ReferenceDescription/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//ReferenceDescription/abstract"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//ReferenceDescription/volume"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//ReferenceDescription/issue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//ReferenceDescription/page"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//ReferenceDescription/approvalMode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//ReferenceDescription/website"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//ReferenceDescription/comment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//ReferenceDescription/type"/>
+    </genClasses>
+    <genClasses ecoreClass="pmmlab.ecore#//ModelEquation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//ModelEquation/formulaName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//ModelEquation/modelClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pmmlab.ecore#//ModelEquation/formula"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pmmlab.ecore#//ModelEquation/literature"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
